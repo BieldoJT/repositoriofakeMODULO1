@@ -1,0 +1,66 @@
+import pandas as pd
+import datetime
+
+class Questionario:
+    def __init__(self):
+        self.respostas = []
+        self.perguntas = [
+            "Pergunta 1? (1 - Sim, 2 - Não, 3 - Não sei): ",
+            "Pergunta 2? (1 - Sim, 2 - Não, 3 - Não sei): ",
+            "Pergunta 3? (1 - Sim, 2 - Não, 3 - Não sei): ",
+            "Pergunta 4? (1 - Sim, 2 - Não, 3 - Não sei): "
+        ]
+
+    def coletar_informacoes(self):
+        while True:
+            try:
+                idade = int(input("Digite sua idade (00 para encerrar): "))
+                if idade == 0:
+                    return False
+                elif idade < 0 or idade > 150:
+                    raise ValueError("Idade inválida. Por favor, insira uma idade válida.")
+                break
+            except ValueError as e:
+                print(e)
+
+        while True:
+            genero = input("Digite seu gênero (M/F): ").upper()
+            if genero in ['M', 'F']:
+                break
+            else:
+                print("Gênero inválido. Por favor, insira 'M' para masculino ou 'F' para feminino.")
+
+        respostas = {'Idade': idade, 'Gênero': genero}
+        for i, pergunta in enumerate(self.perguntas, start=1):
+            while True:
+                resposta = input(pergunta)
+                if resposta in ['1', '2', '3']:
+                    break
+                else:
+                    print("Resposta inválida. Por favor, insira '1', '2' ou '3'.")
+
+            respostas[f'Resposta {i}'] = resposta
+        respostas['Data/Hora'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        self.respostas.append(respostas)
+        return True
+
+    def escrever_csv(self, nome_arquivo='questionario.csv'):
+        df = pd.DataFrame(self.respostas)
+        df.to_csv(nome_arquivo, index=False)
+
+    def exibir_resultados(self):
+        df = pd.DataFrame(self.respostas)
+        print("Resultados do Questionário:")
+        print(df)
+
+# Função principal
+def main():
+    questionario = Questionario()
+    continuar = True
+    while continuar:
+        continuar = questionario.coletar_informacoes()
+    questionario.escrever_csv()
+    questionario.exibir_resultados()
+
+if __name__ == "__main__":
+    main()
