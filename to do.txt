@@ -1,4 +1,12 @@
 - colocar as perguntas (criar 2 perguntas além das 4)
-- separar o codigo em 2 arquivos e usar o import
-- ver a aplicação de um executavel
-- ver a aplicação de um grafico que se altera a medida que novas informações aparecem na tabela
+- ~separar o codigo em 2 arquivos e usar o import ~
+- ver a aplicação de um executavel *****
+- ver a aplicação de um grafico que se altera a medida que novas informações aparecem na tabela **
+]
+
+
+
+
+perguntas::
+
+voce ja usou a IA na sua vida?
