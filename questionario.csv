@@ -1,13 +1,5 @@
-Idade,Gênero,Resposta 1,Resposta 2,Resposta 3,Resposta 4,Data/Hora
-85,M,não,sim,não sabe,não,2024-04-02 21:12:54
-54,M,sim,não,sim,não,2024-04-02 21:26:21
-45,M,sim,não,sim,não,2024-04-02 21:33:27
-85,M,não,sim,não sabe,não,2024-04-02 21:12:54
-54,M,sim,não,sim,não,2024-04-02 21:26:21
-45,M,sim,não,sim,não,2024-04-02 21:33:27
-85,F,sim,não sabe,sim,não,2024-04-02 21:33:37
-85,M,não,sim,não sabe,não,2024-04-02 21:12:54
-54,M,sim,não,sim,não,2024-04-02 21:26:21
-45,M,sim,não,sim,não,2024-04-02 21:33:27
-85,F,sim,não sabe,sim,não,2024-04-02 21:33:37
-66,M,não,não,sim,sim,2024-04-02 21:33:46
+ID,Idade,Gênero,Resposta 1,Resposta 2,Resposta 3,Resposta 4,Data/Hora
+1,77,M,não,não sabe,sim,não,2024-04-04 20:53:08
+2,44,F,não,não sabe,sim,não,2024-04-04 20:53:19
+3,12,M,não sabe,não sabe,não sabe,não sabe,2024-04-04 20:53:44
+4,41,F,não sabe,não sabe,não sabe,não sabe,2024-04-04 20:54:08

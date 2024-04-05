@@ -5,7 +5,7 @@ def main():
     questionario = module.Questionario()
     
     while True:
-        opcao = input("\n1 - Fazer pesquisa // 2 - Mostrar tabela // ou 00 para sair: \n")
+        opcao = input("\n1 - Fazer pesquisa // 2 - Mostrar tabela // 3 - Remover pesquisa // ou 00 para sair: \n")
         
         if opcao == '1':
             questionario.coletar_informacoes()
@@ -13,6 +13,11 @@ def main():
             questionario.exibir_resultados()
         elif opcao == '2':
             questionario.exibir_resultados()
+        
+        elif opcao == '3':
+            
+            questionario.remove_linha()
+        
         elif opcao == '00':
             break
         else:
